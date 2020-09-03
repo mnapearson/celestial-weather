@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+* {
+  margin: 0 auto;
+}
+
+.welcome {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Make the image responsive */
+.welcome img {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.welcome #welcome-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: lightblue;
+  opacity: 60%;
+  color: black;
+  font-size: 40px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.welcome #welcome-button:hover {
+  background-color: black;
+}
