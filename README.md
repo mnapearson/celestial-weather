@@ -1,2 +1,2 @@
 # celestial-weather
-Simple but beautiful site for checking the weather and moon phase.
+Minimalist approved site for checking the local weather and moon phase.
