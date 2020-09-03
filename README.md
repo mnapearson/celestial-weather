@@ -1,2 +1,2 @@
-# sweater-weather
-Simple vanilla-code website for knowing if you need to wear a sweater.
+# celestial-weather
+Simple but beautiful site for checking the weather and moon phase.
