@@ -2,6 +2,11 @@
 
 * {
   margin: 0 auto;
+  font-family: "Permanent Marker", cursive;
+}
+
+body {
+  background-color: #f7f7f7;
 }
 
 .welcome {
@@ -19,11 +24,11 @@
 /* Style the button and place it in the middle of the container/image */
 .welcome #welcome-button {
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 30%;
+  left: 60%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: lightblue;
+  background-color: white;
   opacity: 60%;
   color: black;
   font-size: 40px;
@@ -32,8 +37,189 @@
   cursor: pointer;
   border-radius: 50px;
   font-family: "Permanent Marker", cursive;
+  -webkit-animation: fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.welcome #welcome-button:hover {
-  background-color: black;
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image1 {
+  margin-top: 2rem;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image2 {
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  -webkit-animation: slide-in-blurred-left 7s cubic-bezier(0.23, 1, 0.32, 1)
+    reverse both;
+  animation: slide-in-blurred-left 7s cubic-bezier(0.23, 1, 0.32, 1) reverse
+    both;
+}
+
+@-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.title h1 {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-family: "Permanent Marker", cursive;
+  font-size: 40px;
+}
+
+.current-info {
+  margin-top: -1rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 5ch;
+}
+
+.current-info p {
+  font-size: 25px;
+}
+
+.magic-8-ball {
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+
+.crystal-ball {
+  height: 20%;
+  width: 20%;
+}
+
+#magic-button {
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #f7f7f7;
+}
+
+#magic-button :hover {
+  -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+  animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
 }
