@@ -18,6 +18,34 @@ document.getElementById("magic-button").addEventListener(
 const urlAnswer = "http://localhost:3000/answers/random";
 const urlMoon = "http://wttr.in/leipzig?format=%25m";
 const urlWeather = "http://wttr.in/leipzig?format=2&%25=C";
+const urlApod =
+  "https://api.nasa.gov/planetary/apod?api_key=z73R3rNe2S3kyi1Edljco6bUuJ8HwFtnrBh8uFgb";
+
+fetch(urlApod)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("potd").setAttribute("src", data.url);
+  });
+
+fetch(urlApod)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("apod-title").textContent = JSON.stringify(
+      data.title
+    );
+  });
+
+fetch(urlApod)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("copyright").textContent = String(data.copyright);
+  });
 
 fetch(urlAnswer)
   .then((response) => {
@@ -34,7 +62,7 @@ fetch(urlMoon)
     return response.text();
   })
   .then((data) => {
-    document.getElementById("moon-phase").textContent = data;
+    document.getElementById("moon-phase").textContent = "Moon Phase: " + data;
   });
 
 fetch(urlWeather)
@@ -42,5 +70,6 @@ fetch(urlWeather)
     return response.text();
   })
   .then((data) => {
-    document.getElementById("current-weather").textContent = data;
+    document.getElementById("current-weather").textContent =
+      "Leipzig's weather: " + data;
   });

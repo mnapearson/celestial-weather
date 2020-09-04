@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <title>Celestial Weather</title>
   </head>
   <body>
@@ -31,26 +32,35 @@
       <div class="title">
         <h1>celestial weather</h1>
         <div class="current-info">
-          <p id="moon">Moon Phase:</p>
+         
           <p id="moon-phase"></p>
-          <p id="weather">Leipzig's weather:</p>
+          
           <p id="current-weather"></p>
         </div>
       </div>
-      <div class="magic-8-ball">
+      <div class="crystal-ball">
         <h2>Is today going to be a good day?</h2>
         <div id="answer">
-          <p id="oracle">The Oracle says,</p>
+          <p id="oracle">The Crystal Ball says,</p>
           <p id="magic-answer" hidden></p>
           <button class="button" id="magic-button">
             <img
-              class="crystal-ball"
               src="https://www.netclipart.com/pp/m/228-2285152_crystalball-crystal-freetoedit-fortuneteller-magic-crystal-ball-vector.png"
               alt="crystal"
             />
           </button>
         </div>
+        <div class="nasa-photo">
+          <div class="apod-title">
+            <h2>NASA Photo of the Day</h2>
+          </div>
+        <div class="apod-image" id="apod-image">
+        <img id="potd" src="" alt="APOD"/>
+        </div>
+        <h3 id="apod-title"></h3>
+        <span class="iconify" data-inline="false" data-icon="la:copyright-solid"></span>
+        <p id="copyright"></p>
       </div>
-    </section>
+      </section>
   </body>
 </html>
