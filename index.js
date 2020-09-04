@@ -15,7 +15,7 @@ document.getElementById("magic-button").addEventListener(
   false
 );
 
-const urlAnswer = "http://localhost:3000/answers/random";
+const urlAnswer = "https://crystal-ball-express.herokuapp.com/answers/random";
 const urlMoon = "http://wttr.in/leipzig?format=%25m";
 const urlWeather = "http://wttr.in/leipzig?format=2&%25=C";
 const urlApod =
