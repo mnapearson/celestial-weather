@@ -126,111 +126,108 @@
         <h2>Rumi says...</h2>
         <p id="rumi-api"></p>
       </div>
-      <iframe
-        class="amaria-video"
-        src="https://www.youtube.com/embed/oQn7aaIMgiw"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-      <div class="horoscopes">
-        <div class="circle-container">
-          <div class="aries" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-aries"
-            ></span>
-            <p hidden>Aries (Mar 21 - Apr 19)</p>
-          </div>
-          <div class="taurus" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-taurus"
-            ></span>
-            <p hidden>Taurus (Apr 20 - May 20)</p>
-          </div>
-          <div class="gemini" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-gemini"
-            ></span>
-            <p hidden>Gemini (May 21 - June 20)</p>
-          </div>
-          <div class="cancer" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-cancer"
-            ></span>
-            <p hidden>Cancer (Jun 21 - Jul 22)</p>
-          </div>
-          <div class="leo" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-leo"
-            ></span>
-            <p hidden>Leo (Jul 23 - Aug 22)</p>
-          </div>
-          <div class="virgo" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-virgo"
-            ></span>
-            <p hidden>Virgo (Aug 23 - Sep 22)</p>
-          </div>
-          <div class="libra" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-libra"
-            ></span>
-            <p hidden>Libra (Sep 23 - Oct 22)</p>
-          </div>
-          <div class="scorpio" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-scorpio"
-            ></span>
-            <p hidden>Scorpio (Oct 23 - Nov 21)</p>
-          </div>
-          <div class="sagittarius" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-sagittarius"
-            ></span>
-            <p hidden>Sagittarius (Nov 22 - Dec 21)</p>
-          </div>
-          <div class="capricorn" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-capricorn"
-            ></span>
-            <p hidden>Capricorn (Dec 22 - Jan 19)</p>
-          </div>
-          <div class="aquarius" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-aquarius"
-            ></span>
-            <p hidden>Aquarius (Jan 20 - Feb 18)</p>
-          </div>
-          <div class="pisces" id="sign">
-            <span
-              class="iconify"
-              data-inline="false"
-              data-icon="mdi:zodiac-pisces"
-            ></span>
-            <p hidden>Pisces (Feb 19 - Mar 20)</p>
+      <div class="horoscope-title">
+        <button id="horoscopes-button">Horoscopes</button>
+      </div>
+      <div class="puff-in-center" id="puff-in-center" hidden>
+        <div class="horoscopes">
+          <div class="circle-container">
+            <div class="aries" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-aries"
+              ></span>
+              <p hidden>Aries (Mar 21 - Apr 19)</p>
+            </div>
+            <div class="taurus" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-taurus"
+              ></span>
+              <p hidden>Taurus (Apr 20 - May 20)</p>
+            </div>
+            <div class="gemini" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-gemini"
+              ></span>
+              <p hidden>Gemini (May 21 - June 20)</p>
+            </div>
+            <div class="cancer" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-cancer"
+              ></span>
+              <p hidden>Cancer (Jun 21 - Jul 22)</p>
+            </div>
+            <div class="leo" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-leo"
+              ></span>
+              <p hidden>Leo (Jul 23 - Aug 22)</p>
+            </div>
+            <div class="virgo" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-virgo"
+              ></span>
+              <p hidden>Virgo (Aug 23 - Sep 22)</p>
+            </div>
+            <div class="libra" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-libra"
+              ></span>
+              <p hidden>Libra (Sep 23 - Oct 22)</p>
+            </div>
+            <div class="scorpio" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-scorpio"
+              ></span>
+              <p hidden>Scorpio (Oct 23 - Nov 21)</p>
+            </div>
+            <div class="sagittarius" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-sagittarius"
+              ></span>
+              <p hidden>Sagittarius (Nov 22 - Dec 21)</p>
+            </div>
+            <div class="capricorn" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-capricorn"
+              ></span>
+              <p hidden>Capricorn (Dec 22 - Jan 19)</p>
+            </div>
+            <div class="aquarius" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-aquarius"
+              ></span>
+              <p hidden>Aquarius (Jan 20 - Feb 18)</p>
+            </div>
+            <div class="pisces" id="sign">
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="mdi:zodiac-pisces"
+              ></span>
+              <p hidden>Pisces (Feb 19 - Mar 20)</p>
+            </div>
           </div>
         </div>
       </div>

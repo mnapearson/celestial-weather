@@ -7,10 +7,22 @@ document.getElementById("welcome-button").addEventListener(
   false
 );
 
+document.querySelector(".taurus").addEventListener("click", function (event) {
+  event.target.classList.toggle("selected");
+});
+
 document.getElementById("magic-button").addEventListener(
   "click",
   function () {
     document.getElementById("magic-answer").hidden = false;
+  },
+  false
+);
+
+document.getElementById("horoscopes-button").addEventListener(
+  "click",
+  function () {
+    document.getElementById("puff-in-center").hidden = false;
   },
   false
 );
