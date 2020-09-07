@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
@@ -12,11 +12,60 @@
   </head>
   <body>
     <section id="welcome" class="welcome">
+      <div class="scene">
+        <div class="cube">
+          <div class="cube-face cube-face-front">
+            <img
+              src="https://img2.pngio.com/test-your-knowledge-5-little-known-facts-about-the-sistine-chapel-sistine-chapel-png-975_648.png"
+              alt="sistine-chapel"
+              height="400px"
+              width="400px;"
+            />
+          </div>
+          <div class="cube-face cube-face-back">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Venus_botticelli_detail.jpg/1920px-Venus_botticelli_detail.jpg"
+              alt="face of venus"
+              height="400px"
+              width="400px;"
+            />
+          </div>
+          <div class="cube-face cube-face-left">
+            <img
+              src="https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvYXNzZXRzLzIxZjliM2QwLTc5Y2QtNGFmMS05NDc4LTMwZjBjYjkzNmMwNGJmYTVjNmI5M2NjMjgwNDg0YV9Gb3JiaWRkZW5fZnJ1aXQuanBnIl0sWyJwIiwiY29udmVydCIsIi1hdXRvLW9yaWVudCAiXSxbInAiLCJ0aHVtYiIsIjExNTJ4NzY4Kzc3KzIiXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgODEgLWF1dG8tb3JpZW50Il0sWyJwIiwidGh1bWIiLCI2MDB4PiJdXQ/Forbidden_fruit.jpg"
+              alt="adam and eve"
+              height="400px"
+              width="400px;"
+            />
+          </div>
+          <div class="cube-face cube-face-right">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Michelangelo%2C_giudizio_universale%2C_dettagli_33.jpg/330px-Michelangelo%2C_giudizio_universale%2C_dettagli_33.jpg"
+              alt="last judgment"
+              height="400px"
+              width="400px;"
+            />
+          </div>
+          <div class="cube-face cube-face-top">
+            <img
+              src="https://i.pinimg.com/originals/05/14/7d/05147d70df9f77b36aa897bde585826c.jpg"
+              alt="sun and moon"
+              height="400px"
+              width="400px;"
+            />
+          </div>
+          <div class="cube-face cube-face-bottom">
+            <img
+              src="https://i.pinimg.com/originals/ee/ca/b5/eecab574e99361f679c12dd6bbfb3aa8.jpg"
+              alt="the flood"
+              height="400px"
+              width="400px;"
+            />
+          </div>
+        </div>
+      </div>
+
       <button class="button" id="welcome-button">welcome</button>
-      <img
-        src="https://img2.pngio.com/test-your-knowledge-5-little-known-facts-about-the-sistine-chapel-sistine-chapel-png-975_648.png"
-        alt="sistine-chapel"
-      />
     </section>
     <section id="homepage" class="homepage" hidden>
       <div class="parent">
@@ -34,9 +83,8 @@
       <div class="title">
         <h1>celestial weather</h1>
         <div class="current-info">
-         
           <p id="moon-phase"></p>
-          
+
           <p id="current-weather"></p>
         </div>
       </div>
@@ -52,17 +100,35 @@
             />
           </button>
         </div>
-        <div class="nasa-photo">
-          <div class="apod-title">
-            <h2>NASA Photo of the Day</h2>
-          </div>
+      </div>
+      <div class="nasa-photo">
+        <div class="apod-title">
+          <h2>NASA Photo of the Day</h2>
+        </div>
         <div class="apod-image" id="apod-image">
-        <img id="potd" src="" alt="APOD"/>
+          <img id="potd" src="" alt="APOD" />
         </div>
         <h3 id="apod-title"></h3>
-        <div class="copyright-name"><span class="iconify" data-inline="false" data-icon="la:copyright-solid"></span>
-        <p id="copyright"></p></div>
+        <div class="copyright-name">
+          <span
+            class="iconify"
+            data-inline="false"
+            data-icon="la:copyright-solid"
+          ></span>
+          <p id="copyright"></p>
+        </div>
       </div>
-      </section>
+      <div class="rumi-quote">
+        <h2>A Rumi a Day...</h2>
+        <p id="rumi-api"></p>
+        <img
+          id="rumi-pic"
+          src="https://www.theparisreview.org/blog/wp-content/uploads/2017/03/anthony-madrid-rumi-bowie.jpg"
+          alt="rumi-pic"
+          height="200px;"
+          width="350px;"
+        />
+      </div>
+    </section>
   </body>
 </html>

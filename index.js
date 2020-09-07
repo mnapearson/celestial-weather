@@ -20,6 +20,17 @@ const urlMoon = "https://wttr.in/leipzig?format=%25m";
 const urlWeather = "https://wttr.in/leipzig?format=2&%25=C";
 const urlApod =
   "https://api.nasa.gov/planetary/apod?api_key=z73R3rNe2S3kyi1Edljco6bUuJ8HwFtnrBh8uFgb";
+const urlRumi = "https://crystal-ball-express.herokuapp.com/quotes/random";
+
+fetch(urlRumi)
+  .then((response) => {
+    return response.json();
+  })
+  .then((quotes) => {
+    document.getElementById("rumi-api").textContent = JSON.stringify(
+      quotes.quote
+    );
+  });
 
 fetch(urlApod)
   .then((response) => {

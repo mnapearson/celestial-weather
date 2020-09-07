@@ -16,19 +16,15 @@ body {
 }
 
 /* Make the image responsive */
-.welcome img {
-  width: 100vw;
-  height: 100vh;
-}
 
 /* Style the button and place it in the middle of the container/image */
 .welcome #welcome-button {
   position: absolute;
   top: 30%;
-  left: 60%;
+  left: 80%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #f7f7f7;
   opacity: 60%;
   color: black;
   font-size: 40px;
@@ -242,4 +238,51 @@ body {
 
 .nasa-photo h3 {
   margin-top: 1rem;
+}
+
+.scene {
+  margin: 250px;
+  width: 400px;
+  height: 400px;
+
+  perspective: 1200px;
+}
+
+.cube {
+  width: inherit;
+  height: inherit;
+  position: relative;
+
+  transform-style: preserve-3d;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  opacity: 0.7;
+}
+
+.cube-face-front {
+  transform: translate3d(0, 0, 200px);
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 200px);
+}
+
+.cube-face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, 200px);
+}
+
+.cube-face-right {
+  transform: rotateY(90deg) translate3d(0, 0, 200px);
+}
+
+.cube-face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 200px);
+}
+
+.cube-face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 200px);
 }
