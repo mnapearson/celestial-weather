@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
 * {
-  margin: 0 auto;
+  margin: auto;
   max-width: 700px;
   font-family: "Permanent Marker", cursive;
 }
@@ -241,7 +241,7 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   font-family: "Permanent Marker", cursive;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .current-info {
@@ -255,22 +255,41 @@ body {
 
 .current-info p {
   font-size: 20px;
-  padding: 0 auto;
 }
 
 .crystal-ball {
-  margin-top: 3rem;
+  margin-top: 4rem;
+}
+
+.crystal-ball h2 {
+  font-size: 20px;
+  text-align: left;
 }
 
 .crystal-ball img {
-  height: 20%;
-  width: 20%;
+  height: 40%;
+  width: 40%;
+}
+
+#answer {
+  position: relative;
+  display: inline-block;
+}
+
+#answer .text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 50%; /* Set the width of the positioned div */
 }
 
 #magic-button {
-  margin-top: 2rem;
+  outline: none;
   border: none;
-  cursor: pointer;
   background-color: #f7f7f7;
 }
 
@@ -339,8 +358,8 @@ body {
 #potd {
   border: 5px solid black;
   border-radius: 75px;
-  margin-top: 2rem;
-  max-width: 750px;
+
+  max-width: 650px;
   max-height: 100vh;
 }
 
@@ -352,10 +371,23 @@ body {
 
 .nasa-photo h3 {
   margin-top: 1rem;
+  font-size: 18px;
 }
 
 .rumi-quote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 1rem;
+  align-items: center;
+}
+
+#rumi-api {
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 8rem 0 8rem;
+  text-align: center;
 }
 
 #rumi-pic {

@@ -63,7 +63,7 @@ fetch(urlAnswer)
     return response.json();
   })
   .then((answers) => {
-    document.getElementById("magic-answer").textContent = JSON.stringify(
+    document.getElementById("magic-answer").textContent = String(
       answers.answer
     );
   });
