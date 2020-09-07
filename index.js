@@ -16,8 +16,8 @@ document.getElementById("magic-button").addEventListener(
 );
 
 const urlAnswer = "https://crystal-ball-express.herokuapp.com/answers/random";
-const urlMoon = "https://wttr.in/leipzig?format=%25m";
-const urlWeather = "https://wttr.in/leipzig?format=2&%25=C";
+const urlMoon = "https://wttr.in/?format=%25m";
+const urlWeather = "https://wttr.in/?format=2&%25=C";
 const urlApod =
   "https://api.nasa.gov/planetary/apod?api_key=z73R3rNe2S3kyi1Edljco6bUuJ8HwFtnrBh8uFgb";
 const urlRumi = "https://crystal-ball-express.herokuapp.com/quotes/random";
@@ -82,5 +82,5 @@ fetch(urlWeather)
   })
   .then((data) => {
     document.getElementById("current-weather").textContent =
-      "Leipzig's weather: " + data;
+      "Current weather: " + data;
   });
