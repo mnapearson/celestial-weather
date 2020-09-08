@@ -21,47 +21,47 @@ const urlWeather = "https://wttr.in/?format=2&%25=C";
 const urlApod =
   "https://api.nasa.gov/planetary/apod?api_key=z73R3rNe2S3kyi1Edljco6bUuJ8HwFtnrBh8uFgb";
 const urlRumi = "https://crystal-ball-express.herokuapp.com/quotes/random";
-const urlHoroscope =
-  "https://cors-anywhere.herokuapp.com/https://horoscope-api.herokuapp.com/horoscope/today/";
+// const urlHoroscope =
+//   "https://cors-anywhere.herokuapp.com/https://horoscope-api.herokuapp.com/horoscope/today/";
 
-const signs = [
-  "scorpio",
-  "capricorn",
-  "aries",
-  "gemini",
-  "virgo",
-  "libra",
-  "leo",
-  "sagittarius",
-  "cancer",
-  "pisces",
-  "taurus",
-  "aquarius",
-];
+// const signs = [
+//   "scorpio",
+//   "capricorn",
+//   "aries",
+//   "gemini",
+//   "virgo",
+//   "libra",
+//   "leo",
+//   "sagittarius",
+//   "cancer",
+//   "pisces",
+//   "taurus",
+//   "aquarius",
+// ];
 
-let selectedSign = null;
-document.querySelectorAll(".sign").forEach((sign) => {
-  sign.addEventListener("click", () => {
-    if (selectedSign && selectedSign != sign) {
-      selectedSign.classList.remove("selected");
-    }
-    sign.classList.toggle("selected");
-    selectedSign = sign;
+// let selectedSign = null;
+// document.querySelectorAll(".sign").forEach((sign) => {
+//   sign.addEventListener("click", () => {
+//     if (selectedSign && selectedSign != sign) {
+//       selectedSign.classList.remove("selected");
+//     }
+//     sign.classList.toggle("selected");
+//     selectedSign = sign;
 
-    for (const sign of signs) {
-      fetch(urlHoroscope + sign)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          const p = document.createElement("p");
-          p.classList.add("horoscope");
-          p.textContent = data.horoscope;
-          document.querySelector("." + sign).appendChild(p);
-        });
-    }
-  });
-});
+//     for (const sign of signs) {
+//       fetch(urlHoroscope + sign)
+//         .then((response) => {
+//           return response.json();
+//         })
+//         .then((data) => {
+//           const p = document.createElement("p");
+//           p.classList.add("horoscope");
+//           p.textContent = data.horoscope;
+//           document.querySelector("." + sign).appendChild(p);
+//         });
+//     }
+//   });
+// });
 
 fetch(urlRumi)
   .then((response) => {

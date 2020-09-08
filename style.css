@@ -126,7 +126,7 @@ body {
 
 .image2 {
   position: absolute;
-  top: 55px;
+  top: 20px;
   left: 30px;
   -webkit-animation: slide-in-blurred-left 7s cubic-bezier(0.23, 1, 0.32, 1)
     reverse both;
@@ -177,23 +177,35 @@ body {
 
 .title h1 {
   position: absolute;
-  top: 30%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 20%;
   font-family: "Permanent Marker", cursive;
-  font-size: 60px;
+  font-size: 45px;
+  -webkit-animation: fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) 5s both;
+  animation: fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) 5s both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .current-info {
-  margin-top: -1rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 5rem auto;
   display: flex;
-  flex-wrap: wrap;
-  line-height: 5ch;
+  justify-content: center;
 }
-
 .current-info p {
   font-size: 20px;
 }
