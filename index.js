@@ -6,14 +6,16 @@ document.getElementById("welcome-button").addEventListener(
   },
   false
 );
+
 let selectedSign = null;
 document.querySelectorAll(".sign").forEach((sign) => {
-  sign.addEventListener("click", () => {
+  sign.addEventListener("dblclick", () => {
     if (selectedSign && selectedSign != sign) {
       selectedSign.classList.remove("selected");
     }
     sign.classList.toggle("selected");
     selectedSign = sign;
+    sign.querySelector(".birthdates").hidden = false;
   });
 });
 
@@ -31,6 +33,30 @@ const urlWeather = "https://wttr.in/?format=2&%25=C";
 const urlApod =
   "https://api.nasa.gov/planetary/apod?api_key=z73R3rNe2S3kyi1Edljco6bUuJ8HwFtnrBh8uFgb";
 const urlRumi = "https://crystal-ball-express.herokuapp.com/quotes/random";
+
+fetch(
+  "https://cors-anywhere.herokuapp.com/https://horoscope-api.herokuapp.com/horoscope/today/scorpio"
+)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("horoscope-scorpio").textContent = String(
+      data.horoscope
+    );
+  });
+
+fetch(
+  "https://cors-anywhere.herokuapp.com/https://horoscope-api.herokuapp.com/horoscope/today/sagittarius"
+)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("horoscope-sagittarius").textContent = String(
+      data.horoscope
+    );
+  });
 
 fetch(urlRumi)
   .then((response) => {

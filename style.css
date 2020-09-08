@@ -18,6 +18,12 @@ body {
   height: 100vh;
 }
 
+#welcome-button {
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
 .scene {
   margin: 150px;
   width: 400px;
@@ -103,71 +109,6 @@ body {
 
 .cube-face-bottom {
   transform: rotateX(-90deg) translate3d(0, 0, 200px);
-}
-
-.welcome #welcome-button {
-  margin-top: -3rem;
-  font-size: 72px;
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-  color: hotpink;
-  font-family: "Sacramento", cursive;
-  position: absolute;
-  animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
-  border: none;
-  cursor: pointer;
-  background-color: #f7f7f7;
-}
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #f7f7f7;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    /*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #f7f7f7;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    /*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  }
 }
 
 .parent-images {
@@ -356,6 +297,8 @@ body {
 }
 
 #potd {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   border: 5px solid black;
   border-radius: 75px;
 
@@ -372,30 +315,9 @@ body {
   font-size: 18px;
 }
 
-.rumi-quote {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  align-items: center;
-}
-
-#rumi-api {
-  font-size: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem 8rem 0 8rem;
-  text-align: center;
-}
-
-#rumi-pic {
-  margin-top: 1rem;
-  border: 2px solid black;
-}
-
 .horoscope-title {
   padding-top: 2rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
   display: flex;
   justify-content: left;
@@ -522,5 +444,27 @@ body {
 }
 
 .selected {
-  transform: scale(3);
+  transform: scale(1);
+  transition: transform(5s);
+}
+
+.birthdates {
+  font-size: 10px;
+}
+
+.rumi-quote {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#rumi-api {
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 8rem 0 8rem;
+  text-align: center;
 }
