@@ -6,23 +6,21 @@ document.getElementById("welcome-button").addEventListener(
   },
   false
 );
-
-document.querySelector(".taurus").addEventListener("click", function (event) {
-  event.target.classList.toggle("selected");
+let selectedSign = null;
+document.querySelectorAll(".sign").forEach((sign) => {
+  sign.addEventListener("click", () => {
+    if (selectedSign && selectedSign != sign) {
+      selectedSign.classList.remove("selected");
+    }
+    sign.classList.toggle("selected");
+    selectedSign = sign;
+  });
 });
 
 document.getElementById("magic-button").addEventListener(
   "click",
   function () {
     document.getElementById("magic-answer").hidden = false;
-  },
-  false
-);
-
-document.getElementById("horoscopes-button").addEventListener(
-  "click",
-  function () {
-    document.getElementById("puff-in-center").hidden = false;
   },
   false
 );
