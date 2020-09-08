@@ -315,22 +315,26 @@ body {
   font-size: 18px;
 }
 
-.horoscope-title {
+.horoscopes {
   padding-top: 2rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: left;
-  text-align: left;
+  margin: 5rem auto;
 }
 
-.horoscope-title a {
+.stars h2 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.stars a {
   border: none;
   outline: none;
   text-decoration: none;
-  font-size: 30px;
   border-radius: 20px;
-  padding: 0 2rem 0 2rem;
+  padding: 0 2rem;
+
   -webkit-animation: color-change-5x 10s linear infinite alternate both;
   animation: color-change-5x 10s linear infinite alternate both;
 }
@@ -369,8 +373,8 @@ body {
     background: #3bd80d;
   }
 }
-
 .circle-container {
+  margin: 3rem auto;
   /* --circle-radius: 14em; */
   position: relative;
   width: 40em;
@@ -381,13 +385,26 @@ body {
   border-radius: 50%;
 }
 
+.circle-container .stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10em;
+  height: 4em;
+  margin: -2em -5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .circle-container .sign {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 4em;
+  width: 10em;
   height: 4em;
-  margin: -2em;
+  margin: -2em -5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -450,6 +467,11 @@ body {
 
 .birthdates {
   font-size: 10px;
+  visibility: hidden;
+}
+
+.sign:hover .birthdates {
+  visibility: visible;
 }
 
 .rumi-quote {
