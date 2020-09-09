@@ -311,17 +311,23 @@ header {
 }
 
 .crystal-ball {
-  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .crystal-ball h2 {
-  font-size: 20px;
+  font-size: 30px;
   text-align: left;
+  margin: 2rem;
 }
 
 .crystal-ball img {
-  height: 40%;
-  width: 40%;
+  margin: 3rem 5rem 0 5rem;
+  height: 70%;
+  width: 70%;
 }
 
 #answer {
@@ -330,6 +336,7 @@ header {
 }
 
 #answer .text {
+  font-size: 18px;
   position: absolute;
   z-index: 999;
   margin: 0 auto;
@@ -408,18 +415,17 @@ header {
   }
 }
 
-#potd {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border: 5px solid black;
-  border-radius: 75px;
-
-  max-width: 650px;
-  max-height: 100vh;
+.nasa-photo {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.nasa-photo {
-  margin-top: 5rem;
+#potd {
+  border: 5px solid black;
+  border-radius: 75px;
+  max-width: 500px;
+  max-height: auto;
 }
 
 .nasa-photo h3 {
@@ -431,61 +437,7 @@ header {
   padding-top: 2rem;
 }
 
-.stars h2 {
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.stars a {
-  border: none;
-  outline: none;
-  text-decoration: none;
-  border-radius: 20px;
-  padding: 0 2rem;
-
-  -webkit-animation: color-change-5x 10s linear infinite alternate both;
-  animation: color-change-5x 10s linear infinite alternate both;
-}
-
-@-webkit-keyframes color-change-5x {
-  0% {
-    background: #19dcea;
-  }
-  25% {
-    background: #b22cff;
-  }
-  50% {
-    background: #ea2222;
-  }
-  75% {
-    background: #f5be10;
-  }
-  100% {
-    background: #3bd80d;
-  }
-}
-@keyframes color-change-5x {
-  0% {
-    background: #19dcea;
-  }
-  25% {
-    background: #b22cff;
-  }
-  50% {
-    background: #ea2222;
-  }
-  75% {
-    background: #f5be10;
-  }
-  100% {
-    background: #3bd80d;
-  }
-}
 .circle-container {
-  margin: 3rem auto;
   /* --circle-radius: 14em; */
   position: relative;
   width: 40em;
