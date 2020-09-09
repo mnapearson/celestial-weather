@@ -84,19 +84,20 @@ document.querySelectorAll(".sign").forEach((sign) => {
     }
     sign.classList.toggle("selected");
     selectedSign = sign;
-
-    for (const sign of signs) {
-      fetch(urlHoroscope + sign)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          const p = document.createElement("p");
-          p.classList.add("horoscope");
-          p.textContent = data.horoscope;
-          document.querySelector("." + sign).appendChild(p);
-        });
+    if (sign.querySelector(".horoscope")) {
+      return;
     }
+
+    fetch(urlHoroscope + sign.dataset.sign)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const p = document.createElement("p");
+        p.classList.add("horoscope");
+        p.textContent = data.horoscope;
+        document.querySelector("." + sign.dataset.sign).appendChild(p);
+      });
   });
 });
 
