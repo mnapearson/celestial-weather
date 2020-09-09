@@ -3,22 +3,30 @@ document.getElementById("welcome-button").addEventListener(
   function () {
     document.getElementById("welcome").hidden = true;
     document.getElementById("homepage").hidden = false;
+    document.getElementById("weather").hidden = false;
   },
   false
 );
 
-document.getElementById("weather-cloud").addEventListener("click", function () {
-  document.getElementById("homepage").hidden = true;
+document.getElementById("goback").addEventListener("click", function () {
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("homepage").hidden = false;
   document.getElementById("weather").hidden = false;
+  document.getElementById("nasa").hidden = true;
+  document.getElementById("rumi").hidden = true;
+  document.getElementById("dailyhoro").hidden = true;
+  document.getElementById("crystal").hidden = true;
 });
 
 document.getElementById("apod-cloud").addEventListener("click", function () {
   document.getElementById("homepage").hidden = true;
+  document.getElementById("weather").hidden = true;
   document.getElementById("nasa").hidden = false;
 });
 
 document.getElementById("rumi-cloud").addEventListener("click", function () {
   document.getElementById("homepage").hidden = true;
+  document.getElementById("weather").hidden = true;
   document.getElementById("rumi").hidden = false;
 });
 
@@ -26,11 +34,13 @@ document
   .getElementById("horoscope-cloud")
   .addEventListener("click", function () {
     document.getElementById("homepage").hidden = true;
+    document.getElementById("weather").hidden = true;
     document.getElementById("dailyhoro").hidden = false;
   });
 
 document.getElementById("crystal-cloud").addEventListener("click", function () {
   document.getElementById("homepage").hidden = true;
+  document.getElementById("weather").hidden = true;
   document.getElementById("crystal").hidden = false;
 });
 
@@ -48,47 +58,47 @@ const urlWeather = "https://wttr.in/?format=2&%25=C";
 const urlApod =
   "https://api.nasa.gov/planetary/apod?api_key=z73R3rNe2S3kyi1Edljco6bUuJ8HwFtnrBh8uFgb";
 const urlRumi = "https://crystal-ball-express.herokuapp.com/quotes/random";
-// const urlHoroscope =
-//   "https://cors-anywhere.herokuapp.com/https://horoscope-api.herokuapp.com/horoscope/today/";
+const urlHoroscope =
+  "https://cors-anywhere.herokuapp.com/https://horoscope-api.herokuapp.com/horoscope/today/";
 
-// const signs = [
-//   "scorpio",
-//   "capricorn",
-//   "aries",
-//   "gemini",
-//   "virgo",
-//   "libra",
-//   "leo",
-//   "sagittarius",
-//   "cancer",
-//   "pisces",
-//   "taurus",
-//   "aquarius",
-// ];
+const signs = [
+  "scorpio",
+  "capricorn",
+  "aries",
+  "gemini",
+  "virgo",
+  "libra",
+  "leo",
+  "sagittarius",
+  "cancer",
+  "pisces",
+  "taurus",
+  "aquarius",
+];
 
-// let selectedSign = null;
-// document.querySelectorAll(".sign").forEach((sign) => {
-//   sign.addEventListener("click", () => {
-//     if (selectedSign && selectedSign != sign) {
-//       selectedSign.classList.remove("selected");
-//     }
-//     sign.classList.toggle("selected");
-//     selectedSign = sign;
+let selectedSign = null;
+document.querySelectorAll(".sign").forEach((sign) => {
+  sign.addEventListener("click", () => {
+    if (selectedSign && selectedSign != sign) {
+      selectedSign.classList.remove("selected");
+    }
+    sign.classList.toggle("selected");
+    selectedSign = sign;
 
-//     for (const sign of signs) {
-//       fetch(urlHoroscope + sign)
-//         .then((response) => {
-//           return response.json();
-//         })
-//         .then((data) => {
-//           const p = document.createElement("p");
-//           p.classList.add("horoscope");
-//           p.textContent = data.horoscope;
-//           document.querySelector("." + sign).appendChild(p);
-//         });
-//     }
-//   });
-// });
+    for (const sign of signs) {
+      fetch(urlHoroscope + sign)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          const p = document.createElement("p");
+          p.classList.add("horoscope");
+          p.textContent = data.horoscope;
+          document.querySelector("." + sign).appendChild(p);
+        });
+    }
+  });
+});
 
 fetch(urlRumi)
   .then((response) => {

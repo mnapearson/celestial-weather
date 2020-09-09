@@ -3,12 +3,17 @@
 
 * {
   margin: auto;
-  max-width: 700px;
   font-family: "Permanent Marker", cursive;
 }
 
 body {
   background-color: #f7f7f7;
+  max-width: 700px;
+}
+
+#gotocube {
+  margin-top: 1rem;
+  font-size: 30px;
 }
 
 .welcome {
