@@ -92,8 +92,9 @@
           <h1>celestial weather</h1>
         </div>
       </header>
+
       <div class="nav-clouds">
-        <div class="weather-cloud">
+        <div class="weather-cloud" id="weather-cloud">
           <img
             class="weather-cloud"
             src="https://www.nicepng.com/png/detail/309-3096517_nubepreplanes04-nubepreplanes05-nubepreplanes05-cloud-render.png"
@@ -101,7 +102,7 @@
           />
           <p>weather</p>
         </div>
-        <div class="crystal-cloud">
+        <div class="crystal-cloud" id="crystal-cloud">
           <img
             class="crystal-cloud"
             src="https://www.nicepng.com/png/detail/309-3096517_nubepreplanes04-nubepreplanes05-nubepreplanes05-cloud-render.png"
@@ -109,7 +110,7 @@
           />
           <p>crystal ball</p>
         </div>
-        <div class="apod-cloud">
+        <div class="apod-cloud" id="apod-cloud">
           <img
             class="apod-cloud"
             src="https://www.nicepng.com/png/detail/309-3096517_nubepreplanes04-nubepreplanes05-nubepreplanes05-cloud-render.png"
@@ -117,7 +118,7 @@
           />
           <p>APOD</p>
         </div>
-        <div class="horoscope-cloud">
+        <div class="horoscope-cloud" id="horoscope-cloud">
           <img
             class="horoscope-cloud"
             src="https://www.nicepng.com/png/detail/309-3096517_nubepreplanes04-nubepreplanes05-nubepreplanes05-cloud-render.png"
@@ -125,7 +126,7 @@
           />
           <p>horoscopes</p>
         </div>
-        <div class="rumi-cloud">
+        <div class="rumi-cloud" id="rumi-cloud">
           <img
             class="rumi-cloud"
             src="https://www.nicepng.com/png/detail/309-3096517_nubepreplanes04-nubepreplanes05-nubepreplanes05-cloud-render.png"
@@ -136,12 +137,13 @@
       </div>
     </section>
 
-    <section class="main-page" hidden>
+    <section class="weather" id="weather" hidden>
       <div class="current-info">
         <p id="moon-phase"></p>
         <p id="current-weather"></p>
       </div>
-
+    </section>
+    <section class="crystal" id="crystal" hidden>
       <div class="crystal-ball">
         <h2>Is today going to be a good day?</h2>
         <div id="answer">
@@ -154,7 +156,8 @@
           </button>
         </div>
       </div>
-
+    </section>
+    <section class="nasa" id="nasa" hidden>
       <div class="nasa-photo">
         <div class="apod-title">
           <h2>NASA Photo of the Day</h2>
@@ -172,7 +175,8 @@
           <p id="copyright"></p>
         </div>
       </div>
-
+    </section>
+    <section class="dailyhoro" id="dailyhoro" hidden>
       <div class="horoscopes" id="horoscopes">
         <div class="stars">
           <h2><a href="#horoscopes">Let the stars be your guide...</a></h2>
@@ -300,7 +304,8 @@
           </div>
         </div>
       </div>
-
+    </section>
+    <section class="rumi" id="rumi" hidden>
       <div class="rumi-quote">
         <h2>Rumi says...</h2>
         <p id="rumi-api"></p>

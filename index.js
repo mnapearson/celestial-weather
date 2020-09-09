@@ -7,6 +7,33 @@ document.getElementById("welcome-button").addEventListener(
   false
 );
 
+document.getElementById("weather-cloud").addEventListener("click", function () {
+  document.getElementById("homepage").hidden = true;
+  document.getElementById("weather").hidden = false;
+});
+
+document.getElementById("apod-cloud").addEventListener("click", function () {
+  document.getElementById("homepage").hidden = true;
+  document.getElementById("nasa").hidden = false;
+});
+
+document.getElementById("rumi-cloud").addEventListener("click", function () {
+  document.getElementById("homepage").hidden = true;
+  document.getElementById("rumi").hidden = false;
+});
+
+document
+  .getElementById("horoscope-cloud")
+  .addEventListener("click", function () {
+    document.getElementById("homepage").hidden = true;
+    document.getElementById("dailyhoro").hidden = false;
+  });
+
+document.getElementById("crystal-cloud").addEventListener("click", function () {
+  document.getElementById("homepage").hidden = true;
+  document.getElementById("crystal").hidden = false;
+});
+
 document.getElementById("magic-button").addEventListener(
   "click",
   function () {

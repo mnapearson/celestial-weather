@@ -175,6 +175,11 @@ body {
   }
 }
 
+header {
+  justify-content: center;
+  text-align: center;
+}
+
 .title h1 {
   position: absolute;
   top: 20%;
@@ -206,9 +211,9 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  -webkit-animation: puff-in-center 6s cubic-bezier(0.47, 0, 0.745, 0.715) 6s
+  -webkit-animation: puff-in-center 3s cubic-bezier(0.47, 0, 0.745, 0.715) 3s
     both;
-  animation: puff-in-center 6s cubic-bezier(0.47, 0, 0.745, 0.715) 6s both;
+  animation: puff-in-center 3s cubic-bezier(0.47, 0, 0.745, 0.715) 3s both;
 }
 
 @-webkit-keyframes puff-in-center {
@@ -419,7 +424,6 @@ body {
 
 .horoscopes {
   padding-top: 2rem;
-  margin: 5rem auto;
 }
 
 .stars h2 {
