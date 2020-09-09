@@ -560,3 +560,10 @@ header {
   margin: 1rem 8rem 0 8rem;
   text-align: center;
 }
+
+.bouquet img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
