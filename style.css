@@ -201,6 +201,96 @@ body {
   }
 }
 
+.nav-clouds {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: puff-in-center 6s cubic-bezier(0.47, 0, 0.745, 0.715) 6s
+    both;
+  animation: puff-in-center 6s cubic-bezier(0.47, 0, 0.745, 0.715) 6s both;
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.nav-clouds img {
+  width: 100%;
+  height: auto;
+}
+
+.nav-clouds p {
+  visibility: hidden;
+  position: absolute;
+  margin-top: -4rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  opacity: 70%;
+}
+
+.weather-cloud:hover p {
+  visibility: visible;
+}
+
+.crystal-cloud p {
+  visibility: hidden;
+}
+.crystal-cloud:hover p {
+  visibility: visible;
+}
+
+.apod-cloud p {
+  visibility: hidden;
+}
+.apod-cloud:hover p {
+  visibility: visible;
+}
+
+.horoscope-cloud p {
+  visibility: hidden;
+}
+.horoscope-cloud:hover p {
+  visibility: visible;
+}
+
+.rumi-cloud p {
+  visibility: hidden;
+}
+.rumi-cloud:hover p {
+  visibility: visible;
+}
+
 .current-info {
   margin: 5rem auto;
   display: flex;
