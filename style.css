@@ -11,6 +11,26 @@ body {
   max-width: 700px;
 }
 
+nav {
+  display: flex;
+}
+
+.zencal {
+  margin-top: 1rem;
+}
+
+.zencal a {
+  border: none;
+  outline: none;
+  text-decoration-line: none;
+  color: black;
+  font-size: 22px;
+}
+
+.zencal a:hover {
+  color: pink;
+}
+
 #gotoHOME {
   margin-top: 1rem;
   font-size: 30px;
@@ -426,6 +446,10 @@ header {
   border-radius: 75px;
   max-width: 500px;
   max-height: auto;
+}
+
+#potd:hover {
+  opacity: 40%;
 }
 
 .nasa-photo h3 {
