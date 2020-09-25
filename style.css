@@ -448,10 +448,6 @@ header {
   max-height: auto;
 }
 
-#potd:hover {
-  opacity: 40%;
-}
-
 .nasa-photo h3 {
   margin-top: 1rem;
   font-size: 18px;
