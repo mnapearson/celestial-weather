@@ -36,13 +36,6 @@ nav {
   font-size: 30px;
 }
 
-.welcome {
-  position: relative;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-}
-
 #welcome-button {
   outline: none;
   border: none;
@@ -50,17 +43,14 @@ nav {
 }
 
 .scene {
-  margin: 150px;
-  width: 400px;
-  height: 400px;
-  perspective: 1800px;
+  display: flex;
+  height: 100vh;
 }
 
 .cube {
-  width: inherit;
-  height: inherit;
+  width: 400px;
+  height: 400px;
   position: relative;
-
   transform-style: preserve-3d;
   transform: rotateX(30deg) rotateY(30deg);
   -webkit-transform-style: preserve-3d;
@@ -105,6 +95,7 @@ nav {
     -moz-transform: rotateX(360deg) rotateY(0deg) rotateZ(270deg);
   }
 }
+
 .cube-face {
   width: inherit;
   height: inherit;
