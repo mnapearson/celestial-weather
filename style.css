@@ -34,12 +34,14 @@ nav {
 #gotoHOME {
   margin-top: 1rem;
   font-size: 30px;
+  cursor: pointer;
 }
 
 #welcome-button {
   outline: none;
   border: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .scene {
@@ -268,54 +270,24 @@ header {
 .nav-clouds img {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 .nav-clouds p {
-  visibility: hidden;
   position: absolute;
   margin-top: -4rem;
   justify-content: center;
   text-align: center;
   font-size: 25px;
-  opacity: 70%;
-}
-
-.weather-cloud:hover p {
-  visibility: visible;
-}
-
-.crystal-cloud p {
-  visibility: hidden;
-}
-.crystal-cloud:hover p {
-  visibility: visible;
-}
-
-.apod-cloud p {
-  visibility: hidden;
-}
-.apod-cloud:hover p {
-  visibility: visible;
-}
-
-.horoscope-cloud p {
-  visibility: hidden;
-}
-.horoscope-cloud:hover p {
-  visibility: visible;
-}
-
-.rumi-cloud p {
-  visibility: hidden;
-}
-.rumi-cloud:hover p {
-  visibility: visible;
+  opacity: 80%;
+  cursor: pointer;
 }
 
 .current-info {
   margin: 5rem auto;
   display: flex;
   justify-content: center;
+  cursor: crosshair;
 }
 .current-info p {
   font-size: 20px;
@@ -446,7 +418,7 @@ header {
 }
 
 .horoscopes {
-  padding-top: 2rem;
+  padding-top: 7rem;
 }
 
 .circle-container {

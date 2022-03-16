@@ -4,18 +4,20 @@ document.getElementById("welcome-button").addEventListener(
     document.getElementById("welcome").hidden = true;
     document.getElementById("homepage").hidden = false;
     document.getElementById("weather").hidden = false;
+    document.getElementById("welcome-button").hidden = true;
   },
   false
 );
 
 document.getElementById("goback").addEventListener("click", function () {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("homepage").hidden = false;
-  document.getElementById("weather").hidden = false;
+  document.getElementById("welcome").hidden = false;
+  document.getElementById("homepage").hidden = true;
+  document.getElementById("weather").hidden = true;
   document.getElementById("nasa").hidden = true;
   document.getElementById("rumi").hidden = true;
   document.getElementById("dailyhoro").hidden = true;
   document.getElementById("crystal").hidden = true;
+  document.getElementById("welcome-button").hidden = false;
 });
 
 document.getElementById("apod-cloud").addEventListener("click", function () {
